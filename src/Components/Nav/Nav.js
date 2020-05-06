@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Cart = () => {
+const Nav = () => {
 
     return(
         <section>
-            CART
+            Nav
         </section>
     )
 }
 
-export default Cart;
+export default Nav;

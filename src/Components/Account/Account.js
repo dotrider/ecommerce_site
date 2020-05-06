@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Cart = () => {
+const Account = () => {
 
     return(
         <section>
-            CART
+            Account
         </section>
     )
 }
 
-export default Cart;
+export default Account;
