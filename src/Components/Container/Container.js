@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Account = () => {
+const Container = () => {
 
     return(
         <section>
-            Account
+            DASH
         </section>
     )
 }
 
-export default Account;
+export default Container;

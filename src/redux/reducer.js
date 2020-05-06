@@ -37,6 +37,7 @@ export const logout = () => {
 
 export default function reducer (state = initialState, action){
     const { type, payload } = action
+    console.log(action)
     switch(type){
         case GET_USER_SESSION + '_PENDING':
             return {...state, user: {isLoggin: false}};

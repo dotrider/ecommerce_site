@@ -1,5 +1,9 @@
+@import './variables/variables.scss';
+
 .App {
   text-align: center;
+  height: 100vh;
+  font-family: $primary;
 }
 
 .App-logo {

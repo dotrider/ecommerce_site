@@ -1,0 +1,41 @@
+.login {
+    height: 100vh;
+}
+
+.auth > form > input {
+    width: 60%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+label, span {
+    display: block;
+}
+
+.login, .new-customer{
+    width: 400px;
+    height: 250px;
+}
+
+.new-customer {
+    background-color: #F7F7F7;
+}
+
+.login-inner-container {
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-gap: 5px;
+    // grid-auto-rows: minmax(100px, auto);
+    // margin: 0 auto;
+}
+
+.login-container {
+    margin: 0 auto;
+    width: 100vw;
+}
+
+.inner-pad {
+    padding: 25px;
+}

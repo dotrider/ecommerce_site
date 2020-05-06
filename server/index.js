@@ -5,6 +5,7 @@ const express = require('express'),
 
 const { PORT_NUM, CONNECTION_STR, SECRET_SESH} = process.env;
 const { register, login, userSession, logout} = require('./controller/auth');
+const { getAll } = require('./controller/controller');
 const app = express()
 
 //MIDDLEWARE
@@ -37,3 +38,6 @@ app.post('/auth/register', register);
 app.post('/auth/login', login);
 app.get('/auth/session', userSession);
 app.delete('/auth/logout', logout);
+
+//Endpoints
+app.get('/api/products', getAll);

@@ -1,0 +1,22 @@
+
+.products {
+    width: 100vw;
+}
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-gap: 25px;
+    // grid-auto-rows: minmax(100px, auto);
+    width: 800px;
+    margin: 0 auto;
+}
+
+#product-img{
+    width: 200px;
+    padding: 25px;
+}
+
+.product-info {
+    height: 300px;
+    width: 250px;
+}
