@@ -1,0 +1,2 @@
+SELECT * FROM products
+WHERE price BETWEEN '$30.00' AND '$34.00';

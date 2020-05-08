@@ -21,5 +21,18 @@ module.exports = {
         res.sendStatus(404)
         }
 
+    },
+
+    filter: (req, res) => {
+        const db = req.app.get('db')
+        const {search} = req.params;
+        console.log('filter', search)
+        if(search){
+            db.min_products().then( products => {
+                res.status(200).json(products)
+            })
+        }else{
+            res.sendStatus(404)
+        }
     }
 }

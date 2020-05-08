@@ -30,6 +30,15 @@ const Products = () => {
         })
     }
 
+    const filter = (first) => {
+        console.log('filter', first)
+        if(first){
+            axios.get(`/api/byprice/${first}`).then(res => {
+                setProducts(res.data)
+            })
+        }
+    }
+
 
     const mappedProducts = products.map(product => {
        return <Product key={product.product_id} product={product}/>
@@ -38,7 +47,8 @@ const Products = () => {
     return(
         <section className='products'>
             <Search searchItem={searchItem}
-            resetSearch={resetSearch}/>
+            resetSearch={resetSearch}
+            filter={filter}/>
             <div className='product-container'>
                 {mappedProducts}
             </div>
