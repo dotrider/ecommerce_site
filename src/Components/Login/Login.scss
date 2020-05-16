@@ -27,12 +27,10 @@ label, span {
     display: grid;
     grid-template-columns: repeat(2, 400px);
     grid-gap: 5px;
-    // grid-auto-rows: minmax(100px, auto);
     margin: 0 auto;
 }
 
 .login-container {
-    // margin: 0 auto;
     width: 100vw;
 }
 

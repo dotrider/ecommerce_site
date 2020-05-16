@@ -20,3 +20,29 @@
     height: 300px;
     width: 250px;
 }
+
+.inner-product-cont{
+    padding: 25px;
+    min-width: 980px;
+}
+
+//////SEARCH BAR 
+
+.search {
+    // width: 15vw;
+    // position: sticky;
+    // top: 30px;
+    // margin: 20px 10px;
+    // float: right;
+    // height: 80vh;
+    box-shadow: 0 0 10px 10px rgba(73, 69, 69, 0.249);
+}
+
+
+.search-container > input {
+    width: 40%;
+    padding: 5px 35px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

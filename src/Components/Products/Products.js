@@ -43,7 +43,6 @@ const Products = () => {
 
 
     const searching = () => {
-        // console.log('min',minPrices, 'ave',avePrices, 'max', maxPrices)
         if(minPrices){
             axios.get(`/api/products/minimum/${minPrices}`).then(res => {
             setProducts(res.data)
@@ -75,29 +74,28 @@ const Products = () => {
     return(
         <section className='products'>
 
-        <section className='search'>
-            <div className='search-container'>
-                <input  name='search' value={search} onChange={e => setSearch(e.target.value)}/>
-
-
-
-                <label>Filter by price 20 - 24</label>
-                <input type='radio' value={minPrices} checked={minPrices} onChange={() => setMinPrices((!minPrices))} name='check' />
-                <label>Filter by price 25 - 29</label>
-                <input type='radio' value={avePrices} checked={avePrices} onChange={() => setAvePrices(!avePrices)} name='check' />
-                <label>Filter by price 30 - 34</label>
-                <input type='radio' value={maxPrices} onChange={() => setMaxPrices(!maxPrices)} name='check' />
-                <span onClick={() => searchItem()}>Search</span>
-                <span onClick={() => resetSearch()}>Reset</span>
-                  <span onClick={() => searching()}>Radio</span>
-            </div>
+        <div className='inner-product-cont'>
+            <section className='search'>
+        <div className='search-container'>
+        <input  name='search' value={search} onChange={e => setSearch(e.target.value)}/>
+        
+        
+        
+        <label>Filter by price 20 - 24</label>
+        <input type='radio' value={minPrices} checked={minPrices} onChange={() => setMinPrices((!minPrices))} name='check' />
+        <label>Filter by price 25 - 29</label>
+        <input type='radio' value={avePrices} checked={avePrices} onChange={() => setAvePrices(!avePrices)} name='check' />
+        <label>Filter by price 30 - 34</label>
+        <input type='radio' value={maxPrices} onChange={() => setMaxPrices(!maxPrices)} name='check' />
+        <span onClick={() => searchItem()}>Search</span>
+        <span onClick={() => resetSearch()}>Reset</span>
+        <span onClick={() => searching()}>Radio</span>
+        </div>
         </section>
-            {/* <Search searchItem={searchItem}
-            resetSearch={resetSearch}
-            filter={filter}/> */}
-            <div className='product-container'>
-                {mappedProducts}
-            </div>
+        <div className='product-container'>
+        {mappedProducts}
+        </div>
+        </div>
         </section>
     )
 }
